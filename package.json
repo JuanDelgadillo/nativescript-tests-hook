@@ -1,0 +1,41 @@
+{
+  "name": "nativescript-tests-hook",
+  "version": "0.0.1",
+  "author": "Juan Delgadillo <j.mnuelh@gmail.com> (https://github.com/JuanDelgadillo)",
+  "description": "Nativescript plugin that lets you handling your Nativescript tests like the angular style guide",
+  "nativescript": {
+    "platforms": {
+      "android": "2.4.1",
+      "ios": "2.4.0"
+    },
+    "hooks": [
+      {
+        "type": "before-prepare",
+        "script": "lib/before-prepare.js",
+        "inject": true
+      }
+    ],
+    "tns-ios": {
+      "version": "2.4.0"
+    },
+    "tns-android": {
+      "version": "2.4.1"
+    }
+  },
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "keywords": [
+    "Nativescript",
+    "Hooks",
+    "Angular",
+    "Tests"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.1.5"
+  }
+}
